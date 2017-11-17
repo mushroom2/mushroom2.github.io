@@ -21,6 +21,7 @@
 <button id="notify-btn">Get Push Notification</button>
 
 <script>
+var OneSignal = window.OneSignal || [];
 var notifyMe = function () {
     OneSignal.sendSelfNotification(
   /* Title (defaults if unset) */
