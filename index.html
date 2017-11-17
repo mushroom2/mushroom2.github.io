@@ -22,9 +22,9 @@
 
 <script>
 var OneSignal = window.OneSignal || [];
-var notifyMe = function () {
-    OneSignal.push(function () {
-    OneSignal.sendSelfNotification(
+var notifyMe = function (f) {
+    console.log('ttt');
+    f.sendSelfNotification(
   /* Title (defaults if unset) */
   "Some title",
   /* Message (defaults if unset) */
@@ -54,10 +54,10 @@ var notifyMe = function () {
     url: 'https://example.com/?_osp=do_not_open'
   }]
 )
-    });
+
 };
 var targetbtn = document.getElementById('notify-btn');
-targetbtn.addEventListener('click', notifyMe());
+targetbtn.addEventListener('click', function(){notifyMe(OneSignal)}, false);
 </script>
 </body>
 </html>
