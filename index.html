@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "2d96bd69-53d5-4571-ba75-1ca5ae0939e7",
+        autoRegister: false,
+        notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+      }]);
+    </script>
 </head>
 <body>
 Notify me
