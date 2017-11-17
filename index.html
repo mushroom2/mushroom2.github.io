@@ -23,6 +23,7 @@
 <script>
 var OneSignal = window.OneSignal || [];
 var notifyMe = function () {
+    OneSignal.push(function () {
     OneSignal.sendSelfNotification(
   /* Title (defaults if unset) */
   "Some title",
@@ -52,7 +53,9 @@ var notifyMe = function () {
     icon: 'http://i.imgur.com/MIxJp1L.png',
     url: 'https://example.com/?_osp=do_not_open'
   }]
-)};
+)
+    });
+};
 var targetbtn = document.getElementById('notify-btn');
 targetbtn.addEventListener('click', notifyMe());
 </script>
